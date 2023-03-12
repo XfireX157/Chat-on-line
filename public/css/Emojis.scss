@@ -1,0 +1,65 @@
+.typebox_emojis {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50%;
+    background-color: #1c1b1b;
+    display: none;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    div {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: #fff;
+        padding: 12px 8px;
+
+        #search{
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            margin-left: 16px;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li {
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 10px;
+
+            &:hover {
+                font-size: 1.6rem;
+                margin: 9px;
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: orange;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(37, 37, 39);
+        border-radius: 20px;
+    }
+}
+
+.typebox_emojis_active {
+    display: block;
+}

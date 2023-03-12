@@ -1,0 +1,202 @@
+.chat-screen {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Poppins';
+
+    header {
+        width: 100%;
+        background-color: #1c1b1b;
+        color: #F4F4F4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        box-sizing: border-box;
+
+        #exist-chat {
+            border: 1px solid #F4F4F4;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+
+    .messages{
+        width: 100%;
+        height: calc(100vh - 135px);
+        box-sizing: border-box;
+        background-color: #dcdcdc;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar{
+            width: 8px;
+            height: 0;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: #1c1b1b;
+            border-radius: 22px;
+        }
+
+        .message{
+            display: flex;
+            padding: 10px;
+
+            .img_chat-user {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                margin-left: 12px;
+            }
+
+            .img_chat-other {
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                margin-right: 12px;
+            }
+        }
+
+
+        .message.my-message {
+            justify-content: flex-end;
+
+            div {
+                max-width: 250px;
+                background-color: rgb(145, 209, 145);
+
+                .name {
+                    color: #fff0f0;
+                }
+            }
+        }
+
+        .message.other-message {
+            justify-content: flex-start;
+
+            div {
+                max-width: 250px;
+            }
+        }
+
+        .update  {
+            text-align: center;
+            margin: 30px 0;
+            font-style: italic;
+        }
+    }
+
+    .typebox {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input[type="text"] {
+            width: 100%;
+            outline: none;
+            border: 1px solid #1c1b1b;
+            padding: 10px;
+        }
+
+        button[type="button"] {
+            background-color: #1c1b1b;
+            color: #F4F4F4;
+            font-size: 0.8rem;
+            border: 1px solid #1c1b1b;
+            padding: 9px;
+            cursor: pointer;
+        }
+
+        .box_emojis {
+            width: 44px;
+            padding: 9px;
+            border: 1px solid #1c1b1b;
+            cursor: pointer;
+        }
+
+        .box_mic{
+            width: 44px;
+            padding: 9px;
+            border: 1px solid #1c1b1b;
+            cursor: pointer;
+        }
+
+        .box_img{
+            width: 44px;
+            padding: 9px;
+            border: 1px solid #1c1b1b;
+            cursor: pointer;
+
+            input[type="file"] {
+                display: none;
+            }
+
+            ion-icon {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .img_user{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}
+
+
+.chat-screen > .messages > .message > div{
+    max-width: 80%;
+    background-color: #FFF;
+    box-shadow: 6px 6px 10px 2px #ccc;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.chat-screen > .messages  > .message > div > .name {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.chat-screen > .messages  > .message > div > .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 16px;
+}
+
+.chat-screen > .messages  > .message > div > .text > span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.chat-screen > .messages > .message.my-message > div > .text > span {
+    color: #f1f0f0;
+}
+
+.chat-screen > .messages > .message > div > .text > .text-box {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1c1b1b;
+    margin-right: 12px;
+    overflow-wrap: break-word;
+}
+
+.chat-screen > .messages > .message.my-message > div > .text > .text-box {
+    color: #ffffff;
+}
+
+.img-send{
+    width: 100%;
+    height: 200px;
+}

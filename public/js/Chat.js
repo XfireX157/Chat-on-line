@@ -94,13 +94,13 @@
             el.setAttribute('class', "message my-message")
             el.innerHTML = `
                 <div>
-                <div class="name">${message.username}</div>
-                    ${!message.image_upload ? "" : `<img src=${message.image_upload} alt="img_user" class="img-send"></img>`}   
-                    <div class="text">
-                        <div class="text-box">${message.text}</div>
-                        <span class="time">${time}</span>
+                    <div class="name">${message.username}</div>
+                        ${!message.image_upload ? "" : `<img src=${message.image_upload} alt="img_user" class="img-send"></img>`}   
+                        <div class="text">
+                            <div class="text-box">${message.text}</div>
+                            <span class="time">${time}</span>
+                        </div>
                     </div>
-                </div>
                 <img src=${message.img} alt="img_user" class="img_user img_chat-user">
             `
             messageContainer.appendChild(el)
